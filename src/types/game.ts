@@ -9,6 +9,7 @@ export interface GameMeta {
   description: string
   accentColor: string
   estimatedMinutes: number
+  tags: string[]
 }
 
 export interface GameProgress {

@@ -11,6 +11,7 @@ export const GAMES: GameMeta[] = [
     description: 'Live inside one woman\'s day. Every choice ripples through her hormone balance.',
     accentColor: 'coral',
     estimatedMinutes: 5,
+    tags: ['Story choices', 'Hormone meter', '3 moments'],
   },
   {
     id: 'game2',
@@ -19,6 +20,7 @@ export const GAMES: GameMeta[] = [
     description: 'Tend your Harmony Garden with daily rituals. Watch it bloom as your habits grow.',
     accentColor: 'sage',
     estimatedMinutes: 7,
+    tags: ['7-day garden', 'Daily rituals', 'Streak rewards'],
   },
   {
     id: 'game3',
@@ -27,6 +29,7 @@ export const GAMES: GameMeta[] = [
     description: 'Flip through myths fast. Bust bad info with streaks, combos, and satisfying reveals.',
     accentColor: 'amber',
     estimatedMinutes: 5,
+    tags: ['Fast cards', 'Combos', 'Myth busting'],
   },
 ]
 

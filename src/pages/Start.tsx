@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { CourseFlowerIcon, GameIcon } from '../components/icons/GameIcons'
+import { GameIcon } from '../components/icons/GameIcons'
+import { Logo } from '../components/branding/Logo'
 import { COURSE_SUBTITLE, COURSE_TITLE, GAMES } from '../data/course'
 import type { GameId } from '../types/game'
 
@@ -52,17 +53,19 @@ export function Start() {
 
       {/* No overlay layers on top of background (per request) */}
 
+      {/* Brand mark — top corner */}
+      <motion.div
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45 }}
+        className="absolute top-6 left-6 sm:top-8 sm:left-10 z-10"
+      >
+        <Logo size="md" showSubtitle />
+      </motion.div>
+
       <div className="relative mx-auto w-full max-w-6xl min-h-dvh px-6 sm:px-10 py-10 flex items-center">
-        <div className="w-full max-w-xl">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-plum/10 shadow-soft"
-          >
-            <CourseFlowerIcon className="w-5 h-5 text-coral" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-plum-light">{COURSE_TITLE}</span>
-          </motion.div>
+        <div className="w-full max-w-xl pt-16 sm:pt-20">
+          <span className="sr-only">{COURSE_TITLE}</span>
 
           <motion.h1
             initial={{ opacity: 0, scale: 0.92, y: 8 }}

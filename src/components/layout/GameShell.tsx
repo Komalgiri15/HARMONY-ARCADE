@@ -37,7 +37,7 @@ export function GameShell({
       <header className="sticky top-0 z-40 bg-cream/90 backdrop-blur-sm px-4 pt-4 pb-3">
         <div className="flex items-center gap-3 mb-3">
           {showBack && (
-            <Link to="/" className="shrink-0">
+            <Link to="/hub" className="shrink-0">
               <motion.div
                 whileTap={{ scale: 0.9 }}
                 className="w-10 h-10 flex items-center justify-center rounded-xl bg-cream-dark text-plum"
